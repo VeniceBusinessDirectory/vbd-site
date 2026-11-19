@@ -16,3 +16,9 @@ Rebuild of venicebusinessdirectory.com: a static site on GitHub and Cloudflare P
 ## Rules
 - Every old URL `/listing/<slug>/` must keep working, either by staying the same or through a redirect.
 - Images still live on the WordPress server. Download them into the repo before WordPress is shut off.
+
+## Build & deploy
+- `node build.js` builds the whole site into `dist/`. There are no dependencies.
+- Cloudflare Pages settings: Build command `node build.js`, output directory `dist`.
+- `site.config.json` holds the cities, contact email, hero image, redirects from old URLs, and `hideListingIds` / `mergeInto` for removing duplicates.
+- `static/` holds the CSS and favicon, which are copied into `dist/` as they are.
