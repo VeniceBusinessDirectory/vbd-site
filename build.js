@@ -92,7 +92,7 @@ function page({ title, desc, canonical, body, jsonld, image, noindex, extraHead 
 ${noindex ? '<meta name="robots" content="noindex">' : ''}
 <meta property="og:title" content="${esc(full)}"><meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${SITE.url}${canonical}"><meta property="og:type" content="website">
-${image ? `<meta property="og:image" content="${esc(image)}">` : ''}
+${image ? `<meta property="og:image" content="${esc(image.startsWith('/') ? SITE.url + image : image)}">` : ''}
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/style.css">
 ${extraHead}
