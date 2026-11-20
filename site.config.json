@@ -6,49 +6,309 @@
   "heroImage": "https://venicebusinessdirectory.com/wp-content/uploads/2025/01/Bird-Flying-by-sunset-scaled.jpg",
   "imageBase": "/img",
   "cities": [
-    {"slug": "venice", "name": "Venice", "alt": ["southvenice", "northvenice"], "blurb": "The Shark Tooth Capital of the World: Gulf beaches, a walkable historic downtown and a friendly small-town feel."},
-    {"slug": "sarasota", "name": "Sarasota", "blurb": "Arts, dining and world-famous beaches just up the coast from Venice."},
-    {"slug": "nokomis", "name": "Nokomis", "blurb": "Laid-back beach town home to the Venice Inlet and the Nokomis Beach drum circle."},
-    {"slug": "osprey", "name": "Osprey", "blurb": "Quiet waterfront community near Oscar Scherer State Park and Historic Spanish Point."},
-    {"slug": "englewood", "name": "Englewood", "blurb": "Old Florida charm with Manasota Key beaches and Lemon Bay fishing."},
-    {"slug": "north-port", "name": "North Port", "blurb": "Fast-growing city with Warm Mineral Springs and miles of trails and waterways."},
-    {"slug": "siesta-key", "name": "Siesta Key", "blurb": "Powder-white quartz sand and one of America's best-rated beaches."}
+    {
+      "slug": "venice",
+      "name": "Venice",
+      "alt": [
+        "southvenice",
+        "northvenice"
+      ],
+      "blurb": "The Shark Tooth Capital of the World: Gulf beaches, a walkable historic downtown and a friendly small-town feel."
+    },
+    {
+      "slug": "sarasota",
+      "name": "Sarasota",
+      "blurb": "Arts, dining and world-famous beaches just up the coast from Venice."
+    },
+    {
+      "slug": "nokomis",
+      "name": "Nokomis",
+      "blurb": "Laid-back beach town home to the Venice Inlet and the Nokomis Beach drum circle."
+    },
+    {
+      "slug": "osprey",
+      "name": "Osprey",
+      "blurb": "Quiet waterfront community near Oscar Scherer State Park and Historic Spanish Point."
+    },
+    {
+      "slug": "englewood",
+      "name": "Englewood",
+      "blurb": "Old Florida charm with Manasota Key beaches and Lemon Bay fishing."
+    },
+    {
+      "slug": "north-port",
+      "name": "North Port",
+      "blurb": "Fast-growing city with Warm Mineral Springs and miles of trails and waterways."
+    },
+    {
+      "slug": "siesta-key",
+      "name": "Siesta Key",
+      "blurb": "Powder-white quartz sand and one of America's best-rated beaches."
+    }
   ],
-  "hideListingIds": [],
-  "mergeInto": {},
+  "hideListingIds": [
+    27208,
+    27259,
+    28355,
+    28384,
+    29031,
+    29033,
+    29104,
+    29106,
+    29146,
+    29147,
+    29165,
+    29170,
+    29171,
+    29501,
+    29506,
+    29522,
+    29560,
+    29562,
+    29575,
+    29579,
+    29582,
+    29602,
+    29665,
+    29668,
+    29687,
+    29699,
+    29757,
+    29761,
+    29771,
+    29812,
+    29813,
+    29855,
+    29888,
+    29917,
+    29923,
+    29927,
+    29936,
+    29971,
+    29972,
+    29992,
+    30015,
+    30628,
+    30723,
+    30726,
+    30755,
+    30914,
+    31551,
+    31555,
+    31559,
+    31656,
+    31683,
+    31694,
+    31814,
+    31891,
+    31901,
+    31909,
+    32160,
+    32814,
+    32823,
+    32825,
+    32849,
+    32852,
+    32858,
+    32862,
+    32868,
+    32869,
+    32871,
+    32889,
+    32894,
+    32896,
+    32904,
+    33621
+  ],
+  "mergeInto": {
+    "32889": "2b-kind",
+    "29170": "attitudes-in-dance-3",
+    "29575": "attitudes-in-dance-3",
+    "30628": "badger-bobs-services-3",
+    "30755": "badger-bobs-services-3",
+    "31555": "beach-haus-interiors-2",
+    "29687": "brickyard-barbershop-2",
+    "28384": "british-open-pub",
+    "29171": "chamber-orchestra-of-sarasota",
+    "29757": "coastal-healing-arts-and-natural-therapies-3",
+    "29917": "coastal-healing-arts-and-natural-therapies-3",
+    "28355": "dockside-waterfront-grill",
+    "29582": "dynasty-dance-clubs-venice-2",
+    "29761": "escape-salon-3",
+    "31909": "goodwill-manasota-2",
+    "30726": "groero-handy-landscape-3",
+    "32858": "innovative-design-solution",
+    "29771": "island-oasis-body-studio-2",
+    "31814": "jb-auto-works",
+    "31656": "jessica-guadagno-photography",
+    "29923": "knowellness",
+    "27259": "lightning-fast-car-wash",
+    "32904": "mann-tile",
+    "27208": "my-value-car-sales",
+    "29971": "noire-nail-bar",
+    "29927": "organic-massage",
+    "29972": "organic-nail-and-spa",
+    "29888": "paradise-dermatology",
+    "29104": "paradise-grill-4",
+    "32862": "patio-joes-patio-furniture",
+    "32852": "pier-22-home-decor-and-furnishings",
+    "30015": "pilates-with-randi",
+    "29106": "plaza-mexico",
+    "29855": "salon-sorrento",
+    "32868": "salvation-army-thrift-store",
+    "31901": "seaside-chic-boutique-2",
+    "29165": "spotlight-theatres-2",
+    "32894": "st-francis-animal-rescue-thrift-store",
+    "32871": "the-artistic-flip-flop",
+    "29992": "t-nail-spa",
+    "32896": "treasures-thrift-shop",
+    "32849": "venice-auction",
+    "31551": "venice-living-furniture-interiors-2",
+    "31891": "venice-mercato-on-the-island-2",
+    "33621": "venice-theatre-3",
+    "32869": "vintage-finders-warehouse",
+    "30723": "willies-handyman-services-2",
+    "30914": "wimpys-plumbing-air",
+    "29812": "wingood-spa-2",
+    "29813": "womens-wellness-massage-therapy-2",
+    "29602": "workout-anytime-venice-2"
+  },
   "redirects": [
-    ["/location/northport/", "/location/north-port/"],
-    ["/location/attractons/", "/listing-category/attractions/"],
-    ["/listing-category/attractons/", "/listing-category/attractions/"],
-    ["/attractions/", "/listing-category/attractions/"],
-    ["/dining-establishments/", "/listing-category/restaurant/"],
-    ["/retail-stores/", "/listing-category/retail/"],
-    ["/professional-services/", "/listing-category/professional-services/"],
-    ["/entertainment/", "/listing-category/entertainment/"],
-    ["/health-wellness/", "/listing-category/health-wellness/"],
-    ["/home-services/", "/listing-category/home-services/"],
-    ["/automotive-transportation/", "/listing-category/automotive-transportation/"],
-    ["/venice-fl-business-directory-categories/", "/categories/"],
-    ["/find-it-all/", "/categories/"],
-    ["/submit-listing/", "/add-your-business/"],
-    ["/edit-listing/", "/add-your-business/"],
-    ["/pricing-plan/", "/add-your-business/"],
-    ["/payment-checkout/", "/add-your-business/"],
-    ["/payment-success/", "/add-your-business/"],
-    ["/payment-fail/", "/add-your-business/"],
-    ["/listing-author/", "/add-your-business/"],
-    ["/welcome/", "/"],
-    ["/home-2/", "/"],
-    ["/sample-page/", "/"],
-    ["/thank-you/", "/"],
-    ["/events/", "/blog/"],
-    ["/postcards/", "/advertise-with-us/"],
-    ["/return-shipping-policy/", "/terms-condition/"],
-    ["/category/*", "/blog/"],
-    ["/list-tags/*", "/search/"],
-    ["/features/*", "/categories/"],
-    ["/wp-admin/*", "/"],
-    ["/wp-login.php", "/"],
-    ["/feed/*", "/blog/"]
+    [
+      "/listing/the-village-mystic/",
+      "/listing-category/health-wellness/"
+    ],
+    [
+      "/location/northport/",
+      "/location/north-port/"
+    ],
+    [
+      "/location/attractons/",
+      "/listing-category/attractions/"
+    ],
+    [
+      "/listing-category/attractons/",
+      "/listing-category/attractions/"
+    ],
+    [
+      "/attractions/",
+      "/listing-category/attractions/"
+    ],
+    [
+      "/dining-establishments/",
+      "/listing-category/restaurant/"
+    ],
+    [
+      "/retail-stores/",
+      "/listing-category/retail/"
+    ],
+    [
+      "/professional-services/",
+      "/listing-category/professional-services/"
+    ],
+    [
+      "/entertainment/",
+      "/listing-category/entertainment/"
+    ],
+    [
+      "/health-wellness/",
+      "/listing-category/health-wellness/"
+    ],
+    [
+      "/home-services/",
+      "/listing-category/home-services/"
+    ],
+    [
+      "/automotive-transportation/",
+      "/listing-category/automotive-transportation/"
+    ],
+    [
+      "/venice-fl-business-directory-categories/",
+      "/categories/"
+    ],
+    [
+      "/find-it-all/",
+      "/categories/"
+    ],
+    [
+      "/submit-listing/",
+      "/add-your-business/"
+    ],
+    [
+      "/edit-listing/",
+      "/add-your-business/"
+    ],
+    [
+      "/pricing-plan/",
+      "/add-your-business/"
+    ],
+    [
+      "/payment-checkout/",
+      "/add-your-business/"
+    ],
+    [
+      "/payment-success/",
+      "/add-your-business/"
+    ],
+    [
+      "/payment-fail/",
+      "/add-your-business/"
+    ],
+    [
+      "/listing-author/",
+      "/add-your-business/"
+    ],
+    [
+      "/welcome/",
+      "/"
+    ],
+    [
+      "/home-2/",
+      "/"
+    ],
+    [
+      "/sample-page/",
+      "/"
+    ],
+    [
+      "/thank-you/",
+      "/"
+    ],
+    [
+      "/events/",
+      "/blog/"
+    ],
+    [
+      "/postcards/",
+      "/advertise-with-us/"
+    ],
+    [
+      "/return-shipping-policy/",
+      "/terms-condition/"
+    ],
+    [
+      "/category/*",
+      "/blog/"
+    ],
+    [
+      "/list-tags/*",
+      "/search/"
+    ],
+    [
+      "/features/*",
+      "/categories/"
+    ],
+    [
+      "/wp-admin/*",
+      "/"
+    ],
+    [
+      "/wp-login.php",
+      "/"
+    ],
+    [
+      "/feed/*",
+      "/blog/"
+    ]
   ]
 }

@@ -255,7 +255,12 @@ write('robots.txt', `User-agent: *\nAllow: /\nSitemap: ${SITE.url}/sitemap.xml\n
 
 // redirects: old WordPress URLs -> new
 const redirects = [...SITE.redirects];
-for (const l of L_ALL) if (l.status === 'publish' && HIDE.has(l.id) && SITE.mergeInto?.[l.id]) redirects.push([`/listing/${l.slug}/`, `/listing/${SITE.mergeInto[l.id]}/`]);
+// removed listings: forward to the kept duplicate, else to their category page, else to /categories/
+for (const l of L_ALL) {
+  if (l.status !== 'publish' || !HIDE.has(l.id)) continue;
+  const to = SITE.mergeInto?.[l.id] ? `/listing/${SITE.mergeInto[l.id]}/` : (l.category_slugs?.[0] && CATS[l.category_slugs[0]] ? `/listing-category/${l.category_slugs[0]}/` : '/categories/');
+  if (!redirects.some(([a]) => a === `/listing/${l.slug}/`)) redirects.unshift([`/listing/${l.slug}/`, to]);
+}
 write('_redirects', redirects.map(([a, b]) => `${a} ${b} 301`).join('\n') + '\n');
 
 console.log(`Built ${LISTINGS.length} listings, ${CITIES.length} cities, ${catList.length} categories, ${posts.length} posts -> ${OUT}/`);
