@@ -4,7 +4,7 @@
   "description": "Find the best local businesses, restaurants, services and things to do in Venice, Florida and nearby Sarasota, Nokomis, Englewood, North Port and Osprey.",
   "email": "greatwhitewebsite@gmail.com",
   "heroImage": "https://venicebusinessdirectory.com/wp-content/uploads/2025/01/Bird-Flying-by-sunset-scaled.jpg",
-  "imageBase": "",
+  "imageBase": "/img",
   "cities": [
     {"slug": "venice", "name": "Venice", "alt": ["southvenice", "northvenice"], "blurb": "The Shark Tooth Capital of the World: Gulf beaches, a walkable historic downtown and a friendly small-town feel."},
     {"slug": "sarasota", "name": "Sarasota", "blurb": "Arts, dining and world-famous beaches just up the coast from Venice."},

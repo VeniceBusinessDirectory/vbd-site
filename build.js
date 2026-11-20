@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const SITE = JSON.parse(fs.readFileSync('site.config.json', 'utf8'));
+if (SITE.imageBase) SITE.heroImage = SITE.heroImage.replace(/^https?:\/\/[^/]+\/wp-content\/uploads\/(.+)\.\w+$/, (_, p) => `${SITE.imageBase}/${p}.webp`);
 const OUT = 'dist';
 const L_ALL = JSON.parse(fs.readFileSync('data/listings.json', 'utf8'));
 const POSTS = JSON.parse(fs.readFileSync('data/posts.json', 'utf8')).filter(p => p.status === 'publish');
@@ -15,7 +16,10 @@ const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').re
 const slugify = s => String(s).toLowerCase().normalize('NFKD').replace(/[^\w\s-]/g, '').trim().replace(/[\s_]+/g, '-').replace(/-+/g, '-');
 const strip = h => String(h || '').replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/&#8217;|&rsquo;/g, "'").replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
 const trim = (s, n) => (s.length > n ? s.slice(0, n - 1).replace(/\s+\S*$/, '') + '…' : s);
-const img = u => (u ? (SITE.imageBase ? u.replace('https://venicebusinessdirectory.com/wp-content/uploads', SITE.imageBase) : u) : '');
+// local images: https://venicebusinessdirectory.com/wp-content/uploads/2025/01/x.jpg -> /img/2025/01/x.webp
+const UP = /https?:\/\/(?:www\.)?venicebusinessdirectory\.com\/wp-content\/uploads\/([^"'?#)]+?)\.(?:jpe?g|png|webp|gif)/gi;
+const local = u => (SITE.imageBase ? String(u).replace(UP, (_, p) => `${SITE.imageBase}/${p}.webp`) : String(u));
+const img = u => (u ? local(u) : '');
 function write(rel, html) {
   const f = path.join(OUT, rel);
   fs.mkdirSync(path.dirname(f), { recursive: true });
@@ -26,8 +30,9 @@ function cleanBody(h) {
     .replace(/\[\/?[a-z_-]+[^\]]*\]/gi, '')            // WP shortcodes
     .replace(/<(script|style|iframe|form)[\s\S]*?<\/\1>/gi, '')
     .replace(/ (class|style|id)="[^"]*"/g, '')
+    .replace(/ (srcset|sizes)="[^"]*"/g, '')
     .replace(/(\r?\n){3,}/g, '\n\n')
-    .replace(/https:\/\/venicebusinessdirectory\.com\/wp-content\/uploads/g, m => SITE.imageBase || m);
+    .replace(UP, m => local(m));
 }
 
 // ---------- cities ----------
